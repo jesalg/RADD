@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="radd" ng-controller="AppCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RADD</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#"><i class="icon-globe"></i>&nbsp;RADD</a>
+          <div class="navbar-content">
+            <ul class="nav  pull-right"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+        <%= bootstrap_flash %>
+        <div ng-view></div>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+</body>
+</html>
