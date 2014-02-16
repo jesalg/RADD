@@ -18,7 +18,8 @@ angular.module('sessionService', [])
             },
 
             logout: function(redirectTo) {
-                $http.post('/logout').then(function() {
+                $http.post('/logout').then(function(response) {
+                    $http.defaults.headers.common['X-CSRF-Token'] = response.data.csrfToken;
                     service.currentUser = null;
                     redirect(redirectTo);
                 });
