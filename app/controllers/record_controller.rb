@@ -3,7 +3,7 @@ class RecordController < ApplicationController
   before_filter :authenticate_user!
 
   def index 
-    respond_with(@datas = Record.all)
+    respond_with(Record.all)
   end
 
   def show
@@ -14,7 +14,7 @@ class RecordController < ApplicationController
   def update 
     @data = Record.find(params[:id])
     respond_to do |format|
-      if @data.update_attributes(params[:secure])
+      if @data.update_attributes(record_params)
         format.json { head :no_content }
       else
         format.json { render json: @data.errors, status: :unprocessable_entity }
@@ -23,7 +23,7 @@ class RecordController < ApplicationController
   end
 
   def create
-    @data = Record.create(params[:secure])
+    @data = Record.create(record_params)
     @data.save
     respond_with(@data)
   end
@@ -34,5 +34,11 @@ class RecordController < ApplicationController
     respond_to do |format|
       format.json  { head :ok }
     end
+  end
+
+  private
+
+  def record_params
+    params.require(:record).permit(:secure)
   end
 end
