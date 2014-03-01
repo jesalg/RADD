@@ -56,12 +56,16 @@ Radd::Application.routes.draw do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: :true) do
 
       devise_scope :user do
-        post 'login' => 'sessions#create', :as => 'login'
-        post 'logout' => 'sessions#destroy', :as => 'logout'
-        get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
+        match '/sessions' => 'sessions#create', :via => :post
+        match '/sessions' => 'sessions#destroy', :via => :delete
       end
 
       resources :record
+
+      resources :users, only: [:create]
+      match '/users' => 'users#show', :via => :get
+      match '/users' => 'users#update', :via => :put
+      match '/users' => 'users#destroy', :via => :delete
     end
   end
 

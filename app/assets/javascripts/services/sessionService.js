@@ -7,7 +7,7 @@ angular.module('sessionService', [])
         }
         var service = {
             login: function(email, password) {
-                return $http.post('/api/login', {user: {email: email, password: password} })
+                return $http.post('/api/sessions', {user: {email: email, password: password} })
                     .then(function(response) {
                         service.currentUser = response.data.user;
                         if (service.isAuthenticated()) {
@@ -18,7 +18,7 @@ angular.module('sessionService', [])
             },
 
             logout: function(redirectTo) {
-                $http.post('/api/logout').then(function(response) {
+                $http.delete('/api/sessions').then(function(response) {
                     $http.defaults.headers.common['X-CSRF-Token'] = response.data.csrfToken;
                     service.currentUser = null;
                     redirect(redirectTo);
@@ -26,7 +26,7 @@ angular.module('sessionService', [])
             },
 
             register: function(email, password, confirm_password) {
-                return $http.post('/api/users.json', {user: {email: email, password: password, password_confirmation: confirm_password} })
+                return $http.post('/api/users', {user: {email: email, password: password, password_confirmation: confirm_password} })
                 .then(function(response) {
                     service.currentUser = response.data;
                     if (service.isAuthenticated()) {
@@ -38,7 +38,7 @@ angular.module('sessionService', [])
                 if (service.isAuthenticated()) {
                     return $q.when(service.currentUser);
                 } else {
-                    return $http.get('/api/current_user').then(function(response) {
+                    return $http.get('/api/users').then(function(response) {
                         service.currentUser = response.data.user;
                         return service.currentUser;
                     });
