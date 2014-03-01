@@ -12,8 +12,6 @@ Radd::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :home
-  resources :record
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -50,13 +48,23 @@ Radd::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+  resources :home, only: [:index]
   root :to => "home#index"
   devise_for :users
-  devise_scope :user do
-    post 'login' => 'sessions#create', :as => 'login'
-    post 'logout' => 'sessions#destroy', :as => 'logout'
-    get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
+
+  namespace :api, defaults: {format: :json} do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1, default: :true) do
+
+      devise_scope :user do
+        post 'login' => 'sessions#create', :as => 'login'
+        post 'logout' => 'sessions#destroy', :as => 'logout'
+        get 'current_user' => 'sessions#show_current_user', :as => 'show_current_user'
+      end
+
+      resources :record
+    end
   end
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

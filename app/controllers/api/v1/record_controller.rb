@@ -1,5 +1,4 @@
-class RecordController < ApplicationController
-  respond_to :json
+class Api::V1::RecordController < Api::V1::BaseController
   before_filter :authenticate_user!
 
   def index 
