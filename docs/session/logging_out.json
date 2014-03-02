@@ -1,0 +1,32 @@
+{
+  "resource": "Session",
+  "http_method": "DELETE",
+  "route": "/api/sessions",
+  "description": "Logging out",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/api/sessions",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.radd.v1",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"success\":true,\"info\":\"Logged out\",\"csrfParam\":\"authenticity_token\",\"csrfToken\":\"5tqeLvBJqZyHJO4NxJUy2/4Dio2qyuN/B1W+tRPGD/o=\"}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"01b7a5c0006785924fc3f4acfe0505a0\"","Cache-Control":"max-age=0, private, must-revalidate","Set-Cookie":"_radd_session=YnYrS0lrUGVGRitOVm1CSGZpNEVRMzRPK3VhRVFrU1QzN2FHTndHNnd3T3hnR0RQY1BKenhEZUdFNk5wcWFDU1h3UU1GNTQ3YndsSG5EUXZ5aVRyWm1KMTdsOFdqU0Y4Zkp2aE9LNzNscW45NkZwQXFtTWRKSnhxQlhvRUVpaWl4NjRQU1VDT0ZVL0YzZzMvdi9vTXlaZ0VsYkRkY0tPMGtNV2JYN2pqUTdieWdwVGVsbVhZOWNZWkZxYkloZWsyLS1IL3dMRFVEWXpLM0pJNEYwby82MHpRPT0%3D--1d65a841ab3d5a761586af53ec87fb4b9854b0a2; path=/; HttpOnly","X-Request-Id":"c2d2c43e-3e7c-425c-9767-e86f422e64a9","X-Runtime":"0.068360","Content-Length":"128"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}

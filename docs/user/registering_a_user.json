@@ -1,0 +1,49 @@
+{
+  "resource": "User",
+  "http_method": "POST",
+  "route": "/api/users",
+  "description": "Registering a user",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "user",
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "Password"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password_confirmation",
+      "description": "Password Confirmation"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/users",
+      "request_body": "user[email]=user5_1393723610%40example.com&user[password]=password&user[password_confirmation]=password",
+      "request_headers": {
+        "Accept": "application/vnd.radd.v1",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"id\":40,\"email\":\"user5_1393723610@example.com\",\"created_at\":\"2014-03-02T01:26:50.255Z\",\"updated_at\":\"2014-03-02T01:26:50.264Z\"}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Location":"/api/users","Content-Type":"application/json; charset=utf-8","ETag":"\"60c116fd20a2e0bd8a51bf8f5e1fe55c\"","Cache-Control":"max-age=0, private, must-revalidate","Set-Cookie":"_radd_session=V0Ezdzd6aFV1dlNHN2NMNkhnQUVzdGpVQWw2UjY4bHlKZFRIdENwdEE0NVJtUDRxdkVlT0JKbjVqYW54YlEyT3ZiSEJNY3l2dytGdG8vM2xKei9IS2hpbWVsZlBpUEpMTkNaVmYvZVhjMkxPUm1LcUQrNW0xbC9zMUJwMklKeFBrNGo2VTRuVldMN0dLc3dUaXJVU3lDR3VhMlJ4SWpKdXMzVm1PUzh6ZnJvPS0taUFITUZhc2JmdFhLMTRRdzZzRE1odz09--e26f7c6682911e3713ed85ed8157632092275810; path=/; HttpOnly","X-Request-Id":"40ad7a47-3c95-4e37-96c9-97c96090fe85","X-Runtime":"0.041016","Content-Length":"128"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}

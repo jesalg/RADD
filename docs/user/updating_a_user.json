@@ -1,0 +1,49 @@
+{
+  "resource": "User",
+  "http_method": "PUT",
+  "route": "/api/users",
+  "description": "Updating a user",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "user",
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "Password"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password_confirmation",
+      "description": "Password Confirmation"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/users",
+      "request_body": "user[email]=user4_1393723609%40example.com&user[password]=password&user[password_confirmation]=password",
+      "request_headers": {
+        "Accept": "application/vnd.radd.v1",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Cache-Control":"no-cache","Set-Cookie":"_radd_session=elBBeFdsUC9LUllvMWJlYUlGWjlIOXVHNnp3cldGWSsweVFiK1JBK0RQUEV1VnFFUW9BN3ZsYlhmViswZEFGaks4TWxZbmZIZkhoOExJbHdIanI3RXNNNm95SUl3UzU2WXVYWUI3cjIyZTUvNndDOFZSbHVQSmdCSEgrTy9JaFZQRVNmRU52ZER1L2ljUDBOYURSSmFoT3FXanNyWEZiMTBxSTdtbVdjUFMwPS0tOXdRMmxyTllPQ0owN0o0czh4M1U0QT09--b1a387cd167788bab039442d15e0889fdc473fa3; path=/; HttpOnly","X-Request-Id":"d1a2336c-43cd-48b4-b68b-64c0b82c1a03","X-Runtime":"0.455078"},
+      "response_content_type": null,
+      "curl": null
+}
+  ]
+}

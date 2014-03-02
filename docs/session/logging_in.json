@@ -1,0 +1,43 @@
+{
+  "resource": "Session",
+  "http_method": "POST",
+  "route": "/api/sessions",
+  "description": "Logging in",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "user",
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "Password"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/sessions",
+      "request_body": "user[email]=user1_1393723608%40example.com&user[password]=password",
+      "request_headers": {
+        "Accept": "application/vnd.radd.v1",
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"success\":true,\"info\":\"Logged in\",\"user\":{\"id\":37,\"email\":\"user1_1393723608@example.com\",\"created_at\":\"2014-03-02T01:26:48.685Z\",\"updated_at\":\"2014-03-02T01:26:49.362Z\"}}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"a9375f0515276dc6011fbf0f722f8833\"","Cache-Control":"max-age=0, private, must-revalidate","Set-Cookie":"_radd_session=dFZCZXJRSDNOZEoweTFPdFRpSDlEQkFEaFBxNTlFcm5zRWtRUEZkZDFaZ3NpT3pycWJXNHljUkxsV3RkNjh6ZjIvdWNIYldtd2tvVW5JeEVjSi85MXVzSWhJYXNHTlR0dUhRZzhTMTNqZjJDMHpHS1FQdXdyODRUMUh1OWp5YU9HTFlsT1R3YU91TVNtUXFIQTgzUGNMYXc0QjBCU3hReTdQUG1DSktpbmt3OFgzckJrcXVXWUFVa2VtNnhtT1FYLS1nVlVwemxwekNQVXV1cW9LbUZEV25BPT0%3D--2c19ecf4288b3a437158ed9fcc94333b36f5d995; path=/; HttpOnly","X-Request-Id":"dd1cb2b7-67f5-4177-ba52-d5351bb4220c","X-Runtime":"0.410156","Content-Length":"171"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}

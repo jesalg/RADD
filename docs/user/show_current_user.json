@@ -1,0 +1,31 @@
+{
+  "resource": "User",
+  "http_method": "GET",
+  "route": "/api/users",
+  "description": "Show current user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/users",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/vnd.radd.v1",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"info\":\"Current User\",\"user\":{\"id\":41,\"email\":\"user6_1393723610@example.com\",\"created_at\":\"2014-03-02T01:26:50.298Z\",\"updated_at\":\"2014-03-02T01:26:50.366Z\"}}",
+      "response_headers": {"X-Frame-Options":"SAMEORIGIN","X-XSS-Protection":"1; mode=block","X-Content-Type-Options":"nosniff","X-UA-Compatible":"chrome=1","Content-Type":"application/json; charset=utf-8","ETag":"\"433a807f8d623c56cc2d532a2d9afcd4\"","Cache-Control":"max-age=0, private, must-revalidate","Set-Cookie":"_radd_session=alVCUTNacHdETnh6RWRCWkp1RFpQeHdXUTJoSkF3dGVPTUgzS1B5RHowT0VkVVVQQlcxVHRrZkVnOGtXaWhMcGZmM1F0UUZEMDZoSWM3dk53L21MMFM0bFErUjUyOXFSYU55ODdDYy85c2FZeVhJL0lBc1dBNEVZaTIzWU15WVh1SEdOZlNVWkYzOGRiZGdEdWNtaXRVRTBmL0hoOXd6L0s3SzFTM1M4S3JRPS0tUmdqOFlldHZzUURzejRuK3I2Zy9GZz09--e48cafc338c3059aab1a0f4b33a90a67f13fa6a7; path=/; HttpOnly","X-Request-Id":"18c7387e-97ea-467b-9777-f5999e8c4547","X-Runtime":"0.011718","Content-Length":"159"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}
