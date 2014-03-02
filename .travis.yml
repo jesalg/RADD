@@ -2,8 +2,9 @@ language: ruby
 rvm:
   - 1.9.3
 before_script:
-  - psql -c "CREATE USER radd WITH PASSWORD '4radd!';" -U postgres
-  - psql -c 'create database radd_test;' -U postgres
+  - psql -c 'CREATE USER radd WITH PASSWORD '4radd!';' -U postgres
+  - psql -c 'CREATE DATABASE radd_test;' -U postgres
+  - psql -c 'ALTER DATABASE radd_test OWNER TO radd;' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
