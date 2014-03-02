@@ -21,6 +21,20 @@ http://radd.herokuapp.com/
 
 ``rails s``
 
+###Testing
+
+Run this to execute the API test suite:
+
+``rake db:test:prepare``
+
+``rspec spec``
+
+###Documentation
+
+API documentation is located at `/docs` and is generated using passing acceptance tests.
+
+Run this to regenerate the docs: `rake docs:generate`
 
   [1]: http://jes.al/2013/08/authentication-with-rails-devise-and-angularjs/
   [2]: http://jes.al/2013/10/architecting-restful-rails-4-api/
+
