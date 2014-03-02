@@ -2,8 +2,7 @@ test:
   adapter: postgresql
   encoding: utf8
   database: radd_test
-  username: radd
-  password: 4radd!
+  username: postgres
 
 development:
   adapter: postgresql
