@@ -36,6 +36,5 @@ group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'shoulda-callback-matchers', '>=0.3.0'
-  gem 'spork-rails'
   gem 'json_spec'
 end
