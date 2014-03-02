@@ -1,3 +1,10 @@
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: radd_test
+  username: radd
+  password: 4radd!
+
 development:
   adapter: postgresql
   encoding: utf8
